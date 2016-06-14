@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="ImageZoomButton">
+        <attr name="modeReverse" format="boolean" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+</resources>
