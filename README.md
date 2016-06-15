@@ -21,7 +21,7 @@ In your activity_main.xml file use this code instead of ImageButton:
 
 ```xml  
 <com.vatsal.imagezoomer.ImageZoomButton
-    android:id="@+id/image_buttom"
+    android:id="@+id/image_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@mipmap/ic_launcher" />
