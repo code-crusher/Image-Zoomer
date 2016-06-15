@@ -20,24 +20,26 @@ import android.widget.ImageView;
  */
 
 public final class ZoomAnimation {
-    private static Animator mCurrentAnimator;
-    private static ImageView mImageZoom;
+    private Animator mCurrentAnimator;
+    private ImageView mImageZoom;
+    private Activity activity;
 
-    public ZoomAnimation() {
+    public ZoomAnimation(Activity activity) {
+        this.activity = activity;
     }
 
-    public static void zoomReverse(View view, Activity activity, long duration) {
+    public void zoomReverse(View view, long duration) {
         zoomImageFromThumbReverse(view, activity, duration);
     }
 
-    public static void zoom(View view, Activity activity, long duration) {
+    public void zoom(View view, long duration) {
         zoomImageFromThumb(view, activity, duration);
     }
 
-    public static AnimatorSet set1;
-    public static AnimatorSet set2;
+    public AnimatorSet set1;
+    public AnimatorSet set2;
 
-    private static void zoomImageFromThumbReverse(final View thumbView, Activity activity, long duration) {
+    private void zoomImageFromThumbReverse(final View thumbView, Activity activity, long duration) {
 
         if (mCurrentAnimator != null) {
             mCurrentAnimator.cancel();
@@ -152,7 +154,7 @@ public final class ZoomAnimation {
         });
     }
 
-    private static void zoomImageFromThumb(final View thumbView, Activity activity, long duration) {
+    private void zoomImageFromThumb(final View thumbView, Activity activity, long duration) {
 
         if (mCurrentAnimator != null) {
             mCurrentAnimator.cancel();

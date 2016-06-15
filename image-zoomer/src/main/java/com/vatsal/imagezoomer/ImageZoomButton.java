@@ -89,10 +89,12 @@ public class ImageZoomButton extends ImageButton {
 
     public boolean performClick() {
         Activity activity = (Activity) this.context;
+        ZoomAnimation zoomAnimation = new ZoomAnimation(activity);
+
         if (getModeReverse())
-            ZoomAnimation.zoomReverse(this, activity, getDuration());
+            zoomAnimation.zoomReverse(this, getDuration());
         else
-            ZoomAnimation.zoom(this, activity, getDuration());
+            zoomAnimation.zoom(this, getDuration());
         return super.performClick();
     }
 }

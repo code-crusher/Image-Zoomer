@@ -1,4 +1,10 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.vatsal.imagezoomer' // Change this to match your package name
+version = '1.0.0' // Change this to match your version number
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -21,4 +27,48 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.4.0'
+}
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+generateJavadocsJar.dependsOn generateJavadocs
+
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}
+
+bintray {
+    user = 'code-crusher'
+    key = '5ddba039b9c71692da10f261cc92394fe3f93d77'
+    pkg {
+        repo = 'maven'
+        name = 'ImageZoomer' // the name of the package in BinTray
+
+        version {
+            name = 'image-zoomer' // the name of your library project
+            desc = 'Image zooming library'
+            released  = new Date()
+            vcsTag = '1.0.0' // the version
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/code-crusher/Image-Zoomer.git' // your GitHub repo
+        websiteUrl = 'https://github.com/code-crusher/Image-Zoomer' // your website or whatever has documentation
+    }
+    configurations = ['archives']
 }
