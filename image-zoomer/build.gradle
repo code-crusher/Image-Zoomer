@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = 'com.vatsal.imagezoomer' // Change this to match your package name
-version = '1.0.1' // Change this to match your version number
+group = 'com.vatsal.imagezoomer'
+version = '1.0.2'
 
 android {
     compileSdkVersion 23
@@ -57,18 +57,18 @@ bintray {
     key = '5ddba039b9c71692da10f261cc92394fe3f93d77'
     pkg {
         repo = 'maven'
-        name = 'ImageZoomer' // the name of the package in BinTray
+        name = 'ImageZoomer'
 
         version {
-            name = 'image-zoomer' // the name of your library project
+            name = 'image-zoomer'
             desc = 'Image zooming library'
-            released  = new Date()
-            vcsTag = '1.0.0' // the version
+            released = new Date()
+            vcsTag = '1.0.2'
         }
 
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/code-crusher/Image-Zoomer.git' // your GitHub repo
-        websiteUrl = 'https://github.com/code-crusher/Image-Zoomer' // your website or whatever has documentation
+        vcsUrl = 'https://github.com/code-crusher/Image-Zoomer.git'
+        websiteUrl = 'https://github.com/code-crusher/Image-Zoomer'
     }
     configurations = ['archives']
 }
