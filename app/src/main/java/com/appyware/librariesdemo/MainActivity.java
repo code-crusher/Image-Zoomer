@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        final ImageButton imageView = (ImageButton) findViewById(R.id.ib);
+        final ImageButton imageButton = (ImageButton) findViewById(R.id.image_button);
 
         activity = this;
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ZoomAnimation zoomAnimation = new ZoomAnimation(activity);
