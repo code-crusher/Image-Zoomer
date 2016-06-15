@@ -1,7 +1,7 @@
 Image-Zoomer
 ==========
 ----------
-<img src="https://img.shields.io/badge/release-v1.0.0-brightgreen.svg">
+[![Bintray](https://img.shields.io/badge/Bintray-v1.0.2-brightgreen.svg)](https://bintray.com/code-crusher/maven/ImageZoomer)
 <a href="http://twitter.com/vatsal__bajpai"><img src="https://img.shields.io/badge/Twitter-@vatsal__bajpai-blue.svg?style=falt" alt="Twitter" data-canonical-src="https://img.shields.io/badge/Twitter-@vatsal__bajpai-blue.svg?style=falt" style="max-width:100%;"></a><br>
 
 Image zoomer provides easy way to add zoom animations to you ImageButton. You can set the animation duration and reverse mode to reverse the animation.
@@ -12,7 +12,7 @@ Image zoomer provides easy way to add zoom animations to you ImageButton. You ca
  - ImageZoomer is available in the MavenCentral, so getting it as simple as adding it as a dependency
 
 ```gradle
-compile 'com.vatsal.imagezoomer:image-zoomer:1.0.0'
+compile 'com.vatsal.imagezoomer:image-zoomer:1.0.2'
 ```
 
 #Usage
@@ -21,7 +21,6 @@ In your activity_main.xml file use this code instead of ImageButton:
 
 ```xml  
 <com.vatsal.imagezoomer.ImageZoomButton
-    android:id="@+id/image_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@mipmap/ic_launcher" />
@@ -42,22 +41,39 @@ In your activity_main.xml file use this code instead of ImageButton:
 ###Method 2 : Java
 In your MainActivity.class use this code in OnClick() of ImageButton:
 
+```Java
+Activity activity = getActivity();
+ImageButton imageButton = (ImageButton) findViewById(R.id.image_button);
+long duration = 500;
+```
  - For simple zoom:
 ```Java
-ZoomAnimation.zoom(image_button, activity, duration);
+imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomAnimation zoomAnimation = new ZoomAnimation(activity);
+                zoomAnimation.zoom(v, duration);
+            }
+        });
 ```
 
  - For Reverse zoom:
 
 ```Java
- ZoomAnimation.zoomReverse(image_button, activity, duration);
+imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomAnimation zoomAnimation = new ZoomAnimation(activity);
+                zoomAnimation.zoomReverse(v, duration);
+            }
+        });
 ```
 
 Variable     | Type
 -------- | ---
 image_button | ImageButton
 activity    | Activity
-duration     | long
+duration(ms)     | long
 
 #License
 
