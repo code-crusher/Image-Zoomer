@@ -5,11 +5,17 @@
     android:layout_height="match_parent">
 
     <com.vatsal.imagezoomer.ImageZoomButton
-        android:id="@+id/iv_launcher"
+        android:id="@+id/image_buttom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
         app:duration="200"
         app:modeReverse="true" />
+
+    <ImageButton
+        android:id="@+id/ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
 
 </LinearLayout>
