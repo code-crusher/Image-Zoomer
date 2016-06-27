@@ -1,7 +1,7 @@
 Image-Zoomer
 ==========
 ----------
-[ ![Bintray](https://img.shields.io/badge/Bintray-v1.0.2-brightgreen.svg)](https://bintray.com/code-crusher/maven/ImageZoomer)
+[ ![Bintray](https://img.shields.io/badge/Bintray-v1.0.2-brightgreen.svg?style=flat)](https://bintray.com/code-crusher/maven/ImageZoomer)
 <a href="http://www.methodscount.com/?lib=com.vatsal.imagezoomer%3Aimage-zoomer%3A1.0.2"><img src="https://img.shields.io/badge/Methods and size-core: 103 | 26 KB-e91e63.svg"/></a>
 <a href="http://twitter.com/vatsal__bajpai"><img src="https://img.shields.io/badge/Twitter-@vatsal__bajpai-blue.svg" alt="Twitter" data-canonical-src="https://img.shields.io/badge/Twitter-@vatsal__bajpai-blue.svg" style="max-width:100%;"></a><br>
 
