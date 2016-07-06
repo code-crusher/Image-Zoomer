@@ -3,7 +3,7 @@ Image-Zoomer
 --------
 ###Specs
 [![Bintray](https://img.shields.io/badge/Bintray-v1.0.2-brightgreen.svg?)](https://bintray.com/code-crusher/maven/ImageZoomer)
-<a href="http://www.methodscount.com/?lib=com.vatsal.imagezoomer%3Aimage-zoomer%3A1.0.2"><img src="https://img.shields.io/badge/Methods and size-core: 103 | 26 KB-e91e63.svg"/></a>
+<a href="http://www.methodscount.com/?lib=com.vatsal.imagezoomer%3Aimage-zoomer%3A1.0.2"><img src="https://img.shields.io/badge/Methods%20and%20size-core:%20103%20%7C%2026%20KB-e91e63.svg"/></a>
 <a href="http://twitter.com/vatsal__bajpai"><img src="https://img.shields.io/badge/Twitter-@vatsal__bajpai-blue.svg?" alt="Twitter" data-canonical-src="https://img.shields.io/badge/Twitter-@vatsal__bajpai-blue.svg?" style="max-width:100%;"></a><br>
 
 Image zoomer provides easy way to add zoom animations to you ImageButton. You can set the animation duration and reverse mode to reverse the animation.
